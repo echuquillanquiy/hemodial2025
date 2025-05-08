@@ -23,5 +23,8 @@ class Patient extends Model
         'acceso_venoso',
         'estado',
         'codigo_cs',
+        'n_hd',
+        'n_historia',
+        'justificacion',
     ];
 }

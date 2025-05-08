@@ -31,6 +31,9 @@ class PatientFactory extends Factory
             'acceso_venoso' => fake()->randomElement(['FAV', 'INJ', 'CVCL', 'CVCLP', 'CVCT']),
             'estado' => fake()->randomElement(['ACTIVO', 'INACTIVO']),
             'codigo_cs' => Str::upper(Str::random(5) . fake()->unique()->numerify('#####') . Str::random(5)), // Genera código alfanumérico único de 15 caracteres
+            'n_hd' => fake()->randomNumber(), // Genera un número aleatorio
+            'n_historia' => fake()->unique()->numerify('########'), // Genera un número de historia único de 8 dígitos
+            'justificacion' => fake()->sentence(), // Genera una oración aleatoria como justificación
         ];
     }
 }

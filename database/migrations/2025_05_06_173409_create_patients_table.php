@@ -26,6 +26,8 @@ return new class extends Migration
             $table->string('acceso_venoso');
             $table->string('estado')->default('activo');
             $table->string('codigo_cs')->unique();
+            $table->string('n_hd')->unique();
+            $table->string('n_historia')->nullable();
             $table->text('justificacion')->nullable();
             $table->timestamps();
         });
