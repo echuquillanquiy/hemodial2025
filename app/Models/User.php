@@ -33,7 +33,10 @@ class User extends Authenticatable
         'dni',
         'colegiatura',
         'rne',
-        'profile'
+        'profile',
+        'rol',
+        'modulo',
+        
     ];
 
     /**

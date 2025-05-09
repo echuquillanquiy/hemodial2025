@@ -21,22 +21,11 @@ class UsersSeeder extends Seeder
             'email' => 'echuquillanquiy@gmail.com',
             'username' => 'echuquillanqui',
             'password' => bcrypt('password'), // Cambia 'password' por una contraseña segura
+            'rol' => 'Administrador del Sistema',
             'email_verified_at' => now(),
         ]);
         //$superAdminRole = Role::findByName('SuperAdministrador');
         //$superAdmin->assignRole($superAdminRole);
-
-        // Crear usuario Administrador
-        $admin = User::create([
-            'nombres_apellidos' => 'Administrador del Sistema',
-            'dni' => '12345678',
-            'email' => 'admin@example.com',
-            'username' => 'admin',
-            'password' => bcrypt('password'), // Cambia 'password' por una contraseña segura
-            'email_verified_at' => now(),
-        ]);
-        //$adminRole = Role::findByName('Administrador');
-        //$admin->assignRole($adminRole);
 
         // Crear usuario Medico
         $medico = User::create([
@@ -44,6 +33,8 @@ class UsersSeeder extends Seeder
             'dni' => '87654321',
             'email' => 'medico@example.com',
             'username' => 'medico',
+            'rol' => 'Medico',
+            'modulo' => 'TODOS',
             'password' => bcrypt('password'), // Cambia 'password' por una contraseña segura
             'email_verified_at' => now(),
         ]);
@@ -56,6 +47,9 @@ class UsersSeeder extends Seeder
             'dni' => '11223344',
             'email' => 'licenciado@example.com',
             'username' => 'licenciado',
+            'rol' => 'Licenciado',
+            'modulo' => 'MODULO 1',
+            'colegiatura' => '923456',
             'password' => bcrypt('password'), // Cambia 'password' por una contraseña segura
             'email_verified_at' => now(),
         ]);
@@ -68,6 +62,7 @@ class UsersSeeder extends Seeder
             'dni' => '55667788',
             'email' => 'tecnico@example.com',
             'username' => 'tecnico',
+            'rol' => 'Tecnico',
             'password' => bcrypt('password'), // Cambia 'password' por una contraseña segura
             'email_verified_at' => now(),
         ]);
@@ -80,6 +75,7 @@ class UsersSeeder extends Seeder
             'dni' => '99887766',
             'email' => 'auditor@example.com',
             'username' => 'auditor',
+            'rol' => 'Auditor',
             'password' => bcrypt('password'), // Cambia 'password' por una contraseña segura
             'email_verified_at' => now(),
         ]);

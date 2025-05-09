@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('colegiatura')->nullable()->unique();
             $table->string('rne')->nullable()->unique();
             $table->string('profile')->nullable();
+            $table->enum('modulo', ['MODULO 1', 'MODULO 2', 'MODULO 3', 'MODULO 4', 'TODOS'])->nullable(); // Define los valores de tu ENUM para 'modulo'
+            $table->enum('rol', ['Administrador del Sistema', 'Medico', 'Licenciado', 'Adminitrativo', 'Auditor', 'Tecnico']); // Define los valores de tu ENUM para 'rol' con un valor por defecto
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
