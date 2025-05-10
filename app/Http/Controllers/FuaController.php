@@ -12,7 +12,7 @@ class FuaController extends Controller
      */
     public function index()
     {
-        //
+        return view('fuas.index');
     }
 
     /**

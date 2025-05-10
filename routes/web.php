@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\FuaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +30,5 @@ Route::middleware([
 });
 
 Route::resource('users', UserController::class);
+Route::resource('patients', PatientController::class);
+Route::resource('fuas', FuaController::class);
